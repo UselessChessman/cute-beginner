@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            position: relative;
+            width: 422px;
+            height: 624px;
+            margin: 100px auto;
+            /* background-color: pink; */
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+
+        .card div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 422px;
+            height: 624px;
+        }
+
+        .face {
+            background-image: url(./images/card-face.jpg);
+            transform: translateZ(5px);
+        }
+
+        .back {
+            background-image: url(./images/card-back.jpg);
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .nav {
+            width: 1200px;
+            margin: 100px auto;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav li {
+            position: relative;
+            float: left;
+            height: 30px;
+            width: 100px;
+            transform-style: preserve-3d;
+            transition: all .5s;
+            /* transform: rotate3d(1,1,0,30deg); */
+        }
+
+        .nav li:hover {
+            transform: rotateX(-90deg);
+        }
+
+        .nav li .cn,
+        .en {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 30px;
+            width: 100px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .nav li .cn {
+            background-color: green;
+            transform: translateZ(15px);
+        }
+
+        .nav li .en {
+            background-color: pink;
+
+            transform: rotateX(90deg) translateZ(15px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a class="cn" href="">1</a>
+                <a class="en" href="">one</a>
+            </li>
+            <li>
+                <a class="cn" href="">2</a>
+                <a class="en" href="">two</a>
+            </li>
+            <li>
+                <a class="cn" href="">3</a>
+                <a class="en" href="">three</a>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <!-- <div class="card">
+        <div class="face"></div>
+        <div class="back"></div>
+    </div> -->
+</body>
+
+</html>
